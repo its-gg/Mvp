@@ -115,7 +115,7 @@ top:50%;
 </script>
 <div class="flex welcome">
     <span class="flex welcomeinfo">
-        <h1 id="welcomehead">Welcome to Vmake</h1>
+        <h1 id="welcomehead">Welcome to Vmake [Deployed]</h1>
         <p>We provide Custom sticthed and Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, laudantium
             ratione! Ipsa earum pariatur sapiente labore laborum, aliquid beatae quasi illo velit eius. Nihil sunt
             quasi, omnis</p>
