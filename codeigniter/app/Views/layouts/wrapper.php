@@ -21,7 +21,7 @@
             <div class="logo">
                 <img src="<?= base_url('/images/logo.png') ?>"
                         alt="Logo Image">
-                <h1 class="com-name"><a href="/" class="com-name">Vmake</a></h1>
+                <h1 class="com-name"><a href="/" class="com-name"><span>V</span><span>m</span><span>a</span><span>k</span><span>e</span></a></h1>
             </div>
             <div class="hamburger">
                 <div class="line1"></div>
