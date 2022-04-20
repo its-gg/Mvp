@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home2/vmakein/deploy
+    - export DEPLOYPATH=/home2/vmakein
     - export CLONEPATH=/home2/vmakein/clone/*
     - /bin/cp -R $CLONEPATH $DEPLOYPATH
