@@ -29,19 +29,31 @@ class Admin extends BaseController{
     public function sendTestimonial()
     {
         $productStore = new HomeTestimonial();
-        $files_info = [];
-        $files = $this->request->getFile('theFile');
-        if(!$files->hasMoved()){
-            $files->move('./uploads/images/testimonial/');
+        // $files_info = [];
+        // $files = $this->request->getFile('theFile');
+        // if(!$files->hasMoved()){
+        //     $files->move('./uploads/images/testimonial/');
+        // }
+        //     $files_info[] = $files->getName();
+        // $sendd = $files->getName();
+
+        $files = $this->request->getFiles();
+        foreach($files['files'] as $file){
+            if(!$file->hasMoved()){
+                $file->move('./uploads/images/testimonial/');
+                $files_info[] = $file->getName();
+           }
         }
-            $files_info[] = $files->getName();
-        $sendd = $files->getName();
+        $sendd = "";
+        foreach($files_info as $file){
+            $sendd = $sendd . $file.",";
+        }
             $data = [
                 'Name' => $this->request->getPost('Name'),
                 'Email' => $this->request->getPost('Email'),
                 'Images'=>$sendd,
                 'Message' => $this->request->getPost('Message'),
-                'Category' => $this->request->getPost('why'),
+                'PR_ID' => $this->request->getPost('PR_ID'),
 
             ];
             $productStore->insert($data);

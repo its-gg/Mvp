@@ -7,7 +7,7 @@
     /* color pallete */
     /* 
     White : #f4f3f3
-Yellow: #f4a830
+Yellow: #f4a830 
 Blue: #3267ac
 pink : #aa3788
 Brick red : #e54466
@@ -34,6 +34,7 @@ Brick red : #e54466
     .buttons_group button:hover {
         background-color: #32ac73;
         color: #e6e6e6;
+
     }
 
     body {
@@ -52,9 +53,8 @@ Brick red : #e54466
 
     /* Navbar */
     nav {
-        height: 5rem;
+        height: 3rem;
         width: 100vw;
-        background: rgba(235, 108, 57, 0.9);
         display: flex;
         justify-content: space-between;
     }
@@ -65,6 +65,7 @@ Brick red : #e54466
 
     .com-name {
         color: #f2f5f7;
+        font-size: 3rem;
     }
 
     /*Styling logo*/
@@ -77,7 +78,7 @@ Brick red : #e54466
     }
 
     .logo img {
-        height: 2rem;
+        height: 5rem;
     }
 
     /*Styling Links*/
@@ -494,22 +495,20 @@ Brick red : #e54466
         nav {
             position: relative;
             z-index: 3;
+            background: none !important;
+            align-items: center !important;
         }
 
         .hamburger {
             display: block;
-            position: absolute;
             cursor: pointer;
-            right: 5%;
-            top: 50%;
-            transform: translate(-5%, -50%);
             z-index: 2;
             transition: all 0.7s ease;
         }
 
         .nav-links {
             position: fixed;
-            background: rgba(170, 55, 136);
+            background: rgb(224, 224, 224);
 
             height: 100vh;
             width: 100%;

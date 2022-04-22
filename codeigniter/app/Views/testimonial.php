@@ -2,9 +2,9 @@
 
 <?= $this->section('content') ?>
 
-<div class="flex welcome rev sign_log">
+<div class="flex welcome rev sign_log" style="align-items: center;">
     <span class="flex welcomeinfo ">
-        <form action="<?= base_url('Home/sendtestinomial/') ?>" method="post" class="flex contact_us"
+    <form action="<?= base_url('Home/sendtestinomial/') ?>" method="post" class="flex contact_us"
             style="align-items:center;" enctype="multipart/form-data">
             <h1 style="text-align: center; width: 100%;">Write your Views</h1>
             <span class="flex">
@@ -20,7 +20,7 @@
             </span>
             <span class="flex message">
                 <label for="text">Image</label>
-                <input type="file" id="" name="files" style="border:solid 1px #e54466;">
+                <input type="file" id="" multiple name="files[]" style="border:solid 1px #e54466;">
 
             </span>
             <span class="flex message">
@@ -34,12 +34,15 @@
         </form>
     </span>
     <div>
-        <img src="<?php echo base_url('images/join.png');?>" alt="" class="contact_img online_pic">
-        <small style="display: block;text-align: center;">Join Our community</small>
+        <img src="<?php echo base_url('images/ides.png');?>" alt="" class="contact_img online_pic">
+        <small style="display: block;text-align: center;">Welcome back</small>
     </div>
 </div>
 
+
+
 <style>
+
 input[type=file]::file-selector-button {
     border: none;
     transition: 1s;
@@ -53,12 +56,9 @@ input[type=file]::file-selector-button {
 
 
 
-.welcome img {
-    height: 35rem;
-}
 
 .online_pic {
-    height: 25rem;
+    height: 30rem;
 }
 
 .rev {
@@ -119,7 +119,7 @@ textarea {
 }
 
 .sign_log {
-    height: 80vh;
+    height: 100vh;
 }
 
 @media screen and (max-width:800px) {
@@ -156,10 +156,6 @@ textarea {
         padding: 10px 20px;
         font-size: large;
 
-    }
-
-    .welcome img {
-        height: auto;
     }
 }
 </style>

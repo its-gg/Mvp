@@ -34,9 +34,9 @@
 
 
 <style>
-.welcome img {
+/* .welcome img {
     height: 35rem;
-}
+} */
 
 .online_pic {
     height: 30rem;

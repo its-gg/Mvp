@@ -16,19 +16,19 @@
 </head>
 
 <body>
-    <div>
-        <nav class="navbar">
+
+        <nav class="navbar" style="background-color:gray;" >
             <div class="logo">
                 <img src="<?= base_url('/images/logo.png') ?>"
-                        alt="Logo Image">
-                <h1 class="com-name"><a href="/" class="com-name"><span>V</span><span>m</span><span>a</span><span>k</span><span>e</span></a></h1>
+                        alt="Logo Image" style="height:5rem;margin-top:15px;">
+                <h1 class="com-name" style = "font-size:2.5rem;margin-top:15px;" ><a href="/" class="com-name"><span style="color:#ff5c5c" >V</span><span style="color:#6C84C6">m</span><span style="color:#666666">a</span><span style="color:#FBDA89">k</span><span style="color:#EA85AC">e</span></a></h1>
             </div>
-            <div class="hamburger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+            <div class="hamburger" style="margin:1rem;" >
+                <div class="line1" style="background:black;" ></div>
+                <div class="line2" style="background:black;" ></div>
+                <div class="line3" style="background:black;" ></div>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links"style="margin-top:15px;">
                 <li><a href="/Home/products">Designs</a></li>
                 <li><a href="/Home/about">About us</a></li>
                 <li><a href="/Home/showtestimonial">VMake</a></li>
@@ -39,7 +39,7 @@
 
             </ul>
         </nav>
-    </div>
+
     <?= $this->renderSection('content') ?>
     <footer class="flex" >
         <!-- <div class="location flex">
@@ -175,7 +175,11 @@
     <script src="https://kit.fontawesome.com/506b713f8c.js" crossorigin="anonymous"></script>
 
     <style>
-   
+   @media screen and (max-width:800px) {
+       .nav-links{
+           margin-top:0px !important;
+       }
+   }
     </style>
 </body>
 

@@ -221,15 +221,8 @@ Ro<?= $this->extend('layouts/wrapper') ?>
 
 
 
-
-
-
-
-
-
-
-            <style>
- body {
+<style>
+     body {
             overflow: hidden;
         }
 
@@ -416,9 +409,14 @@ Ro<?= $this->extend('layouts/wrapper') ?>
             overflow-x: scroll;
             scrollbar-width: thin;
         }
-            </style>
+</style>
 
 
+
+
+
+
+        
         </div>
     </div>
 </div>

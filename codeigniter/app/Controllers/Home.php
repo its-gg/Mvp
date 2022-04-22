@@ -79,13 +79,21 @@ class Home extends BaseController
     
     public function sendtestinomial(){
         $testimonial = new HomeTestimonial();
-        $files = $this->request->getFile('files');
-        $files->move('./uploads/images/testimonial/');
-        $files_info= $files->getName();
+        $files = $this->request->getFiles();
+        foreach($files['files'] as $file){
+            if(!$file->hasMoved()){
+                $file->move('./uploads/images/testimonial/');
+                $files_info[] = $file->getName();
+           }
+        }
+        $sendd = "";
+        foreach($files_info as $file){
+            $sendd = $sendd . $file.",";
+        }
         $data = [
             'Name' => $this->request->getPost('name'),
             'Email' => $this->request->getPost('email'),
-            'Images'=>$files_info,
+            'Images'=>$sendd,
             'Message' => $this->request->getPost('message'),
             ];
             $testimonial->insert($data);

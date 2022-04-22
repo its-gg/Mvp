@@ -11,12 +11,12 @@
     }
     ?>
 
-<div class="d-flex">
+<div class="d-flex flex-wrap">
     <?php foreach($products as $row): ?>
 
 
-    <?php $images = explode(",", $row['Images']);
-?>
+    <?php $images = explode(",", $row['Images']);?>
+
     <div class="card m-3 p-3" style="width: 18rem;">
         <img src="<?php echo base_url('/uploads/images/testimonial/' . $row['Images']); ?>" class="card-img-top border"
             alt="<?= $row['Name'] ?> pic">

@@ -3,14 +3,19 @@
 <?= $this->section('content') ?>
 
 <div class="Alltestimos">
+        
     <h1 style="text-align:center;margin:20px;">Testimonials</h1>
     <?php foreach($reviews as $row): ?>
-
+<?php $images = explode(",", $row['Images']); ?>
         <figure class="snip1274">
   <i class="ion-quote"></i>
   <blockquote><?= $row['Message']?></blockquote>
-  <img src="<?php echo base_url('/uploads/images/testimonial/' . $row['Images']); ?>" alt="sample90"/>
-  <div class="author">
+  <div style="display:flex;">
+
+    <img src="<?php echo base_url('/uploads/images/testimonial/' . $images[0]); ?>" alt="sample90"/>
+    <img src="<?php echo base_url('/uploads/images/testimonial/' . $images[1]); ?>" alt="sample90"/>
+    <div class="author">
+  </div>
     <h5> <?= $row['Name'] ?></h5>
   </div>
 </figure>
@@ -49,7 +54,7 @@ figure.snip1274 * {
 }
 figure.snip1274 img {
   max-width: 100%;
-  vertical-align: middle;
+  /* vertical-align: middle; */
 }
 figure.snip1274 blockquote {
   position: relative;

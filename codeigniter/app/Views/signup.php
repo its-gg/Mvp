@@ -2,15 +2,10 @@
 
 <?= $this->section('content') ?>
 
-<div class="flex welcome rev sign_log">
+<div class="flex welcome rev sign_log" style="align-items: center;">
     <span class="flex welcomeinfo ">
-        <form action="" method="post" class="flex contact_us" style="align-items:center;">
-            <h1 style="text-align: center; width: 100%;">Welcome Vmake User!</h1>
-            <span class="flex">
-                <label for="name">Name</label>
-                <input type="text" id="" name="name">
-
-            </span>
+        <form action="" method="post" class="flex contact_us">
+            <h1 style="text-align: center; width: 100%;">Welcome to Vmake world!</h1>
             <span class="flex">
                 <label for="email">Email</label>
                 <input type="email" id="" name="email">
@@ -22,29 +17,30 @@
                 <input type="password" id="" name="password">
 
             </span>
-            <span class="flex message">
-                <label for="text">Retype Password</label>
-                <input type="password" id="" name="retype">
 
-            </span>
             <span>
                 <button type="submit">Submit</button>
             </span>
+        <small >login here <a href="/Home/login">Login</a></small>
+
         </form>
     </span>
     <div>
-        <img src="<?php echo base_url('images/join.png');?>" alt="" class="contact_img online_pic">
-        <small style="display: block;text-align: center;">Join Our community</small>
+    <img src="<?php echo base_url('images/join.png');?>" alt="" class="contact_img online_pic">
+
+        <small style="display: block;text-align: center;">Welcome back</small>
     </div>
 </div>
 
+
+
 <style>
-.welcome img {
+/* .welcome img {
     height: 35rem;
-}
+} */
 
 .online_pic {
-    height: 25rem;
+    height: 30rem;
 }
 
 .rev {
@@ -105,7 +101,7 @@ textarea {
 }
 
 .sign_log {
-    height: 80vh;
+    height: 100vh;
 }
 
 @media screen and (max-width:800px) {
@@ -142,10 +138,6 @@ textarea {
         padding: 10px 20px;
         font-size: large;
 
-    }
-
-    .welcome img {
-        height: auto;
     }
 }
 </style>
