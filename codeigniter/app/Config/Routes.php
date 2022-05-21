@@ -21,7 +21,7 @@ $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
-$routes->setAutoRoute(true);
+$routes->setAutoRoute(false);
 
 /*
  * --------------------------------------------------------------------
@@ -32,7 +32,20 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->group("/Home", function ($routes) {
+    $routes->add('product/(:any)', 'Home::product/$1');
 
+    $routes->add("products", "Home::products");
+    $routes->add("about", "Home::about");
+    $routes->add("showtestimonial", "Home::showtestimonial");
+    $routes->add("login", "Home::login");
+    $routes->add("contact", "Home::contact");
+    $routes->add("testimonial", "Home::testimonial");
+    $routes->add("signup", "Home::signup");
+});
+$routes->get('admin', 'Admin::index');
+$routes->post('admin/login', 'Admin::login');
+$routes->get('dashboard', 'Dashboard::index', ['filter' => 'authGuard']);
 
 /*
  * --------------------------------------------------------------------

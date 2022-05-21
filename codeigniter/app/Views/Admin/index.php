@@ -1,20 +1,16 @@
-<?php 
-    use App\Controllers\Admin;
-
-?>
 <?= $this->extend('layouts/AdminWrap') ?>
 
 <?= $this->section('Admincontent') ?>
 <style>
-.btn {
-    width: 100%;
-}
+    .btn {
+        width: 100%;
+    }
 
-.card {
-    width: 18rem;
-    margin: 10px;
+    .card {
+        width: 18rem;
+        margin: 10px;
 
-}
+    }
 </style>
 
 <!-- <h1 class="text-center">Admin panel</h1> -->
